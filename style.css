@@ -1,4 +1,15 @@
- /* CSS Reset */
+:root {
+    --primary-color:#005f73;
+    --secondary-color: #0a9396;
+    --text-color-light: #ffffff;
+    --text-color-dark: #333333;
+    --link-hover-color: #94d2bd;
+    --font-primary: 'Playfair Display', serif;
+    --font-secondary: 'Roboto', sans-serif;
+}
+
+
+/* CSS Reset */
 *,
 *::before,
 *::after {
@@ -7,7 +18,203 @@
     box-sizing: border-box;
 }
 
-h1 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 25px;
-}
+
+
+
+
+
+
+
+.header {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    padding: 2rem;
+  }
+  
+  .header-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .header-text h1 {
+    font-size: 2.5rem;
+    font-family: var(--font-primary);
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .social-links img {
+    width: 24px;
+    height: 24px;
+    display: block;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .social-links img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  
+  .icon {
+    color: var(--text-color-dark);
+    text-decoration: none;
+  }
+
+  .icon:hover {
+    color: var(--link-hover-color);
+  }
+  
+/* General Reset and Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  /* Projects Section */
+  .projects {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .projects h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #005f73;
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  /* Project Card */
+  .project-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .project-image img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Project Content */
+  .project-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin: 1rem 0 0.5rem;
+    color: #0a9396;
+  }
+  
+  .project-card p {
+    font-size: 1rem;
+    margin: 0 1rem 1rem;
+  }
+  
+  /* Project Links */
+  .project-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .project-links img {
+    width: 24px;
+    height: auto;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+  
+  .project-links img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  
+  /* footerstyles */
+  .footer {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .footer-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .contact-info {
+    flex: 1;
+  }
+  
+  .contact-info h2 {
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-info p,
+  .contact-info a {
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    color: var(--text-color-light);
+    text-decoration: none;
+  }
+  
+  .contact-info a:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+  }
+  
+  address {
+    font-style: normal;
+    line-height: 1.5;
+  }
+  
+  address p {
+    margin: 0.5rem 0;
+  }
+  
+  .footer img {
+    width: 300px; /* Adjust this based on your selected image */
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
