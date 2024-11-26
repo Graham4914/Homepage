@@ -201,6 +201,13 @@ body {
     text-decoration: underline;
   }
   
+
+  .contact-info img, .project-links img {
+    width: 20px;
+    height: auto;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
   address {
     font-style: normal;
     line-height: 1.5;
@@ -210,6 +217,12 @@ body {
     margin: 0.5rem 0;
   }
   
+  address p img {
+    width: 20px;
+    height: auto;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
   .footer img {
     width: 300px; /* Adjust this based on your selected image */
     height: auto;
@@ -218,3 +231,33 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
+  .footer .social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.footer .social-links img {
+    width: 24px;
+    height: 24px;
+    fill: var(--text-color-light);
+    transition: transform 0.2s ease, fill 0.2s ease;
+}
+
+.footer .social-links img:hover {
+    transform: scale(1.1);
+    fill: var(--link-hover-color);
+}
+
+.footer svg {
+  width: 24px; /* Adjust size as needed */
+  height: auto;
+  fill: var(--text-color-light); /* Makes SVG white */
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.footer svg:hover {
+  fill: var(--link-hover-color); /* Add hover effect */
+  transform: scale(1.1);
+}
