@@ -109,12 +109,13 @@ body {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
     color: #005f73;
+    text-align: start;
   }
   
   .projects-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 1rem;
   }
   
   /* Project Card */
@@ -125,6 +126,7 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin: 2rem;
   }
   
   .project-card:hover {
@@ -171,25 +173,29 @@ body {
     opacity: 0.8;
   }
   
+  .project-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1rem;
+  }
   /* footerstyles */
   .footer {
     background-color: var(--primary-color);
     color: var(--text-color-light);
     padding: 2rem;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
+    gap: 2rem;
   }
   
   .footer-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
   }
   
   .contact-info {
@@ -238,9 +244,10 @@ body {
     vertical-align: middle;
   }
   .footer img {
-    width: 300px; /* Adjust this based on your selected image */
+    width: 100%; 
+    max-width: 1200px;/* Adjust this based on your selected image */
     height: auto;
-    border-radius: 8px;
+
     object-fit: cover;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
@@ -276,6 +283,12 @@ body {
   transform: scale(1.1);
 }
 
+@media (min-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr 2fr; /* Two-column layout on larger screens */
+    align-items: center;
+  }
+}
 
 
 /* about me section */
