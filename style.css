@@ -382,6 +382,9 @@ address p img {
 
 /* About Me Responsive */
 @media (min-width: 600px) and (max-width: 1024px) {
+  .profile-name-overlay {
+    display: none;
+  }
 
   .profile-image-large {
     display: none;
@@ -394,7 +397,7 @@ address p img {
       grid-auto-rows: auto;
       gap: 1rem;
       align-items: start;
-      transform: translateY(-10%);
+      transform: translateY(-1%);
   }
 
   .profile-section {
@@ -413,30 +416,31 @@ address p img {
       float: left;
       margin-right: 1rem;
       margin-bottom: 1rem;
-      margin-top: 0;
-      height: 100%;
-      
+      margin-top:-10rem ;
+      transform: scale(1);
+      margin-left: -2rem;
   }
 
-  h1.profile-name-overlay {
-      position: absolute;
-      top: 10%;
-      right: 20%;
-      font-size: 2rem;
-      color: var(--text-color-light);
-      z-index: 3;
-      
-     
-  }
 
+.profile-name-tablet {
+  transform: translateY(-5rem);
+  font-family: var(--font-primary);
+  font-size: 3rem;
+  color: var(--text-color-light);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  padding: 0.5rem 1rem;
+  width: 100%;
+  text-align: end;
+  z-index: 3;
+}
 
   .about-me-content {
       grid-column: 1 / span 2;
       grid-row: 2 / 2;
       position: relative;
       z-index: 1;
-      padding: 2rem;
-      margin-top: 1rem;
+      padding:  0 2rem 1rem;
+      margin-top: 3rem;
   }
 
   .about-me-content::after {
