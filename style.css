@@ -21,6 +21,9 @@
 .profile-image-tablet {
   display: none;
 }
+.profile-name-tablet {
+  display: none;
+}
 /* General Styles */
 body {
   font-family: var(--font-secondary);
@@ -64,7 +67,8 @@ img {
 .profile-name-overlay {
   position: absolute;
   bottom: 0;
-  left: 0%;
+  left: 50%;
+  text-align: center;
   transform: translateX(-50%);
   font-family: var(--font-primary);
   font-size: 3rem;
@@ -415,14 +419,15 @@ address p img {
       width: 70%;
       float: left;
       margin-right: 1rem;
-      margin-bottom: 1rem;
+     
       margin-top:-10rem ;
       transform: scale(1);
-      margin-left: -2rem;
+      margin-left: -4rem;
   }
 
 
 .profile-name-tablet {
+  display: block;
   transform: translateY(-5rem);
   font-family: var(--font-primary);
   font-size: 3rem;
@@ -431,6 +436,7 @@ address p img {
   padding: 0.5rem 1rem;
   width: 100%;
   text-align: end;
+  margin-right: -4rem;
   z-index: 3;
 }
 
@@ -441,6 +447,7 @@ address p img {
       z-index: 1;
       padding:  0 2rem 1rem;
       margin-top: 3rem;
+      width: 80%;
   }
 
   .about-me-content::after {
@@ -453,6 +460,9 @@ address p img {
       margin-top: 1rem;
       text-align: justify;
       line-height: 1.6;
+  }
+  .about-me h2 {
+    text-align: center;
   }
 }
 
@@ -470,5 +480,16 @@ address p img {
   .projects-grid {
       gap: 3rem;
       max-width: 1600px;
+  }
+  .projects h2 {
+    position: relative;
+    top: 0;
+    left:   30px;
+  }
+}
+
+@media (max-width: 450px) {
+  .profile-name-overlay {
+    font-size: 2.2rem;
   }
 }
