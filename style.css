@@ -218,6 +218,7 @@ img {
 .project-image img {
   width: 100%;
   display: block;
+  object-fit: cover;
 }
 
 .project-card h3 {
