@@ -491,8 +491,20 @@ address p img {
   .footer-container {
     max-width: 96%;
   }
+  
 }
 
+@media (min-width:1400px) {
+  .profile-name-overlay {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  .project-card h3 {
+    font-size: 1.6rem;
+  }
+}
 
 
 @media (max-width: 450px) {
